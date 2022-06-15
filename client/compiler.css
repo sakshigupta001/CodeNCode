@@ -40,22 +40,6 @@
     left: 875px;;
     bottom: 2px;
 }
-/* #editor{
-    resize: horizontal;
-    overflow: auto !important;
-} */
-
-/* .resizer {
-    position: absolute;
-}
-
-.resizer-r {
-    cursor: col-resize;
-    height: 100%;
-    right: 0;
-    top: 0;
-    width: 700px;
-} */
 
 #input{
     width:633px;
