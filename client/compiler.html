@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CodeNCode- Online Compiler
+        </title>
+        
+        <link rel="stylesheet" href="compiler.css">
+        <link rel="stylesheet" href="codemirror/codemirror-5.65.3/lib/codemirror.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/shadowfox.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/icecoder.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/xq-light.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/material-palenight.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/cobalt.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/theme/ambiance.css"/>
+        <script src="./compiler.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/lib/codemirror.js" ></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/runmode/colorize.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/mode/clike/clike.js"></script>
+
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/addon/dialog/dialog.css"/>
+        <link rel="stylesheet" href="./codemirror/codemirror-5.65.3/addon/scroll/simplescrollbars.css"/>
+        <script src="./codemirror/codemirror-5.65.3/addon/scroll/simplescrollbars.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/display/placeholder.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/selection/mark-selection.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/edit/closebrackets.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/search/search.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/search/searchcursor.js"></script>
+        <script src="./codemirror/codemirror-5.65.3/addon/dialog/dialog.js"></script>
+    
+    </head>
+    <body onload="createTextEditor()"> 
+        <div class="mypage">  
+            <div class="codearea">
+                <div class="navbar">
+                    <div class="dropdown">
+                        <select id="langdropdown" onchange="changelang()">
+                            <option value="none">Language</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="cs">C#</option>
+                            <option value="java">Java</option>
+                            <option value="py">Python</option>
+                            <!-- <option value="rb">Ruby</option>
+                            <option value="kt">Kotlin</option>
+                            <option value="swift">Swift</option> -->
+                        </select>
+                        <select id="themedropdown" onchange="changetheme()">
+                            <option  value="shadowfox">Theme</option>
+                            <option value="ambiance">Ambiance</option>
+                            <option value="xq-light">Light</option>
+                            <option value="icecoder">IceCoder</option>
+                            <option value="material-palenight">Material</option>
+                            <option value="cobalt">Cobalt</option>
+                        </select>
+                        <select id="fontdropdown" onchange="changeSize()">
+                            <option value="12">Size</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="32">32</option>
+                        </select>
+                    </div>
+                    <div class="homebtn">
+                        <a href="home.html">Home</a>
+                    </div>
+                    <input type="text" id="filename" placeholder="Enter Filename">
+                </div>  
+                <div id="editor">
+                    <!-- <div class="resizer resizer-r"></div>
+                    <div class="resizer resizer-b"></div>  -->
+                    </div>
+                
+                <input type="file" id="uploadbtn" onchange="upload()">
+                <input type="button" id="uploadfile" value="Upload" onclick="clickbtn()">    
+                <input type="button" id="downloadbtn" value="Download" onclick="download()">
+                <input type="button" id="runbtn" value="Run" onclick="run()">
+                <input type="button" id="clearbtn" value="Clear" onclick="cleartxt()">
+                
+                <div class="io-container">
+                    <div class="input">
+                        <textarea id="input" placeholder="Enter input"></textarea>
+                    </div>
+                    
+                    <div class="output">
+                        <textarea id="output" placeholder="Output"></textarea>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <div class="alert">ALERT</div>
+    </body>
+</html>

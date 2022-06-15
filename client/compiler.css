@@ -1,0 +1,122 @@
+.body,html{
+    overflow: hidden;
+    background-color: rgb(15, 12, 26);
+}
+.navbar{
+    display: flex;
+    align-items: top;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(15, 12, 26);
+    border-bottom: 1px solid #5c606e;
+}
+.dropdown{
+    position: relative;
+    top:4.5px;
+}
+#themedropdown{
+    width: 70px;
+}
+.homebtn{
+    color: rgb(9, 8, 8);
+    background-color: white;
+    position: relative;
+    border: 2px solid #5c606e;
+    border-radius: 10px;
+    width: 50px;
+    left: 445px;;
+    bottom: 2px;
+    margin: 4.5px 3px 3px 3px;
+    padding-left: 10px;
+}
+.homebtn a{
+    text-decoration: none;
+}
+#filename{
+    position: relative;
+    border: 2px solid #5c606e;
+    border-radius: 5px;
+    top: 2px;
+    left: 875px;;
+    bottom: 2px;
+}
+/* #editor{
+    resize: horizontal;
+    overflow: auto !important;
+} */
+
+/* .resizer {
+    position: absolute;
+}
+
+.resizer-r {
+    cursor: col-resize;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 700px;
+} */
+
+#input{
+    width:633px;
+    height:305px;
+    resize: none;
+    position: relative;
+    left:707px;
+    bottom: 629px;
+}
+#output{
+    width:633px;
+    height:305px;
+    resize:none;
+    position: relative;
+    left:707px;
+    bottom: 629px;
+}
+#uploadbtn{
+    display: none;
+}
+#uploadfile{
+    position: fixed;
+    left: 467px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#downloadbtn{
+    position: fixed;
+    left: 525px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#runbtn{
+    position: fixed;
+    left: 600px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#clearbtn{
+    position: fixed;
+    left: 640px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.alert{
+    width: 330px;
+    height: 70px;
+    position: absolute;
+    bottom: 800px;
+    left: 540px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #09021f;
+    color: #fff;
+    font-size: 25px;
+    transition: transform ease-in-out 1s;
+    box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 
+    0px 9px 46px 8px rgba(0,0,0,0.12) , 
+    0px 11px 15px -7px rgba(0,0,0,0.2)  ;
+}  
+  .show.alert {
+    transform: translate(0, 500%);
+  }
+
